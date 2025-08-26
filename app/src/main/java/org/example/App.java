@@ -22,7 +22,7 @@ public class App {
             return;
         }
 
-        // ✅ declare trainSelectedForBooking
+        // declare trainSelectedForBooking
         Train trainSelectedForBooking = null;
 
         while (option != 7){
@@ -84,7 +84,7 @@ public class App {
                     System.out.println("Select a train by typing 1,2,3...");
                     int trainChoice = scanner.nextInt();
                     if(trainChoice > 0 && trainChoice <= trains.size()){
-                        trainSelectedForBooking = trains.get(trainChoice - 1); // ✅ fixed
+                        trainSelectedForBooking = trains.get(trainChoice - 1); 
                     } else {
                         System.out.println("Invalid train selection");
                     }
@@ -96,7 +96,7 @@ public class App {
                         break;
                     }
                     System.out.println("Select a seat out of these seats:");
-                    List<List<Integer>> seats = trainSelectedForBooking.getSeats(); // ✅ fixed
+                    List<List<Integer>> seats = trainSelectedForBooking.getSeats(); 
                     for (List<Integer> rowList: seats){
                         for (Integer val: rowList){
                             System.out.print(val + " ");
